@@ -47,12 +47,30 @@ function checkJobEligiblity(userData) {
 }
 
 // test case 1
+// let candidate1 = {
+//   age: 28,
+//   experience: 3,
+//   hasEducation: true,
+//   hasSkills: true,
+//   employmentStatus: "employed",
+// };
+
+// test case 2
+// let candidate1 = {
+//   age: 16,
+//   experience: 2,
+//   hasEducation: true,
+//   hasSkills: true,
+//   employmentStatus: "student"
+// };
+
+//test case 3
 let candidate1 = {
-  age: 28,
-  experience: 3,
+  age: 35,
+  experience: 1,
   hasEducation: true,
-  hasSkills: true,
-  employmentStatus: "employed",
+  hasSkills: false,
+  employmentStatus: "unemployed"
 };
 
 const CandidateResult = checkJobEligiblity(candidate1);
@@ -64,3 +82,5 @@ if (CandidateResult.reason.length === 0) {
   console.log("The reason for being rejected is ", CandidateResult.reason);
 }
 console.log("The total score is " + CandidateResult.score);
+
+
