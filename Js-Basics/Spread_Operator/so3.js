@@ -43,3 +43,19 @@ let users = [
 let newUser = { id: 3, name: "Viraj" };
 let updateUsers = [...users, newUser];
 console.log("Updated users are:", updateUsers);
+
+let scores = [85, 90, 76];
+let newScore = [...scores.slice(0, 1), 95, ...scores.slice(1)];
+console.log(newScore);
+
+const displayBook = ({ title, author, ...details }) => {
+  console.log("Author is", author);
+  console.log("Title of the book is ", title);
+  console.log("Other details about the book is", details);
+};
+displayBook({
+  title: "JavaScript for kids",
+  author: "subham Kundu",
+  year: 2026,
+  pages: 500,
+});
